@@ -6,8 +6,8 @@ export async function enviarInicioProduccion(lote: string) {
   return new Promise<void>((resolve, reject) => {
 
     const cliente = mqtt.connect(process.env.MQTT_BROKER_URL!, {
-      username: process.env.MQTT_USER,
-      password: process.env.MQTT_PASS,
+      username: process.env.MQTT_USERNAME,
+      password: process.env.MQTT_PASSWORD,
     });
 
     cliente.on("connect", () => {
